@@ -9,42 +9,17 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-6">
+      <div *ngFor="let service of ourServices"
+        class="col-lg-4 col-md-6">
         <div class="single-cat-item">
           <div class="thumb">
-            <img style="width: 180px" class="img-fluid" src="assets/img/c1.jpg" alt="">
+            <img style="width: 180px" class="img-fluid" [src]="service.image" alt="">
           </div>
           <a href="#">
-            <h4>Terapias Alternativas</h4>
+            <h4>{{service.name}}</h4>
           </a>
           <p>
-            Renuevate, Relájate y Recarga Energía.
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="single-cat-item">
-          <div class="thumb">
-            <img style="width: 280px" class="img-fluid" src="assets/img/c2.jpg" alt="">
-          </div>
-          <a href="#">
-            <h4>Corporal</h4>
-          </a>
-          <p>
-            Aportan un beneficio tanto para la mente como para el cuerpo, y los puedes combinar a tu medida.
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-12">
-        <div class="single-cat-item">
-          <div class="thumb">
-            <img style="width: 280px" class="img-fluid" src="assets/img/c3.jpg" alt="">
-          </div>
-          <a href="#">
-            <h4>Facial</h4>
-          </a>
-          <p>
-            Encuentra el tratamiento adecuado que necesitas para cuidar y rejuvenecer tu rostro.
+            {{service.description}}
           </p>
         </div>
       </div>
