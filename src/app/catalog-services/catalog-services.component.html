@@ -23,8 +23,8 @@
         <ul class="nav nav-pills" id="pills-tab" role="tablist">
 
           <li *ngFor="let category of categories; let i = index" class="nav-item">
-            <a class="nav-link" data-toggle="pill" role="tab" [class.active]="i == 0" [id]="category.id" [href]="'#' + category.link_reference"
-              [attr.aria-controls]="category.aria" [attr.aria-selected]="i == 0">{{category.name}}</a>
+            <a class="nav-link" data-toggle="pill" role="tab" [class.active]="i == 0" [id]="category.id" [href]="'#' + category.reference"
+              [attr.aria-controls]="category.reference" [attr.aria-selected]="i == 0">{{category.name}}</a>
           </li>
 
         </ul>
@@ -32,9 +32,9 @@
     </div>
     <div id="pills-tabContent" class="tab-content absolute">
 
-      <div *ngFor="let category of categories; let i = index" class="tab-pane fade" [id]="category.link_reference" role="tabpanel"
+      <div *ngFor="let category of categories; let i = index" class="tab-pane fade" [id]="category.reference" role="tabpanel"
         aria-labelledby="category.id" [class.active]="i == 0" [class.show]="i == 0">
-        <div *ngFor="let service of services | categoryFilter: category.link_reference" class="single-menu-list row justify-content-between align-items-center">
+        <div *ngFor="let service of services | categoryFilter: category.reference" class="single-menu-list row justify-content-between align-items-center">
           <div class="col-lg-9">
             <a href="#">
               <h4>{{service.name}}</h4>

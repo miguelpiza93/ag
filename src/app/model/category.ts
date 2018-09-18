@@ -1,5 +1,5 @@
 export class Category {
-    link_reference: String;
+    reference: String;
     name: String;
-    aria_control: String;
+    id: String;
 }
