@@ -9,11 +9,15 @@ import { InMemoryDataService } from './in-memory-data-service';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { AboutComponent } from './about/about.component';
+import { CatalogServicesComponent } from './catalog-services/catalog-services.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent
+    ContactComponent,
+    AboutComponent,
+    CatalogServicesComponent
   ],
   imports: [
     BrowserModule,
