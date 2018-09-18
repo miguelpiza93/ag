@@ -20,6 +20,16 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 13, name: 'Corporal', description: 'Aportan un beneficio tanto para la mente como para el cuerpo, y los puedes combinar a tu medida.', image: 'assets/img/c2.jpg'},
       { id: 12, name: 'Facial', description: 'Encuentra el tratamiento adecuado que necesitas para cuidar y rejuvenecer tu rostro.', image: 'assets/img/c3.jpg' }
     ];
-    return {services, homeServices};
+
+    const contact = {
+      address: "Calle 38 # 42 - 24",
+      country: "Cali, Colombia",
+      telephone: "+57 316 8963822",
+      business_hours: "Lun - Vie: 7am - 8pm\nSab: 8am - 3:30pm",
+      email: "alexgomez1814@hotmail.com",
+      short_text: "Envíenos su consulta en cualquier momento!"
+    };
+
+    return {services, homeServices, contact};
   }
 }

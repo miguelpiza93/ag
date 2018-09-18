@@ -1,6 +1,8 @@
 export class ContactInfo {
-    id: number;
-    name: string;
-    description: String;
-    image: String;
+    address: String;
+    country: string;
+    telephone: String;
+    business_hours: String;
+    email: String;
+    short_text: String;
 }
