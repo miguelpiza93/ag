@@ -3,16 +3,12 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const services = [
-      { id: 11, name: 'Mr. Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 9, name: 'Limpieza Facial', category: 'pizza' },
+      { id: 10, name: 'Acupuntura', category: 'pills-bread' },
+      { id: 11, name: 'Tonificacion en gluteos', category: 'pills-burger' },
+      { id: 12, name: 'Reductores', category: 'pills-burger' },
+      { id: 13, name: 'Moldeadores', category: 'pills-burger' },
+      { id: 14, name: 'Pos-Quirúrgicos', category: 'pills-chicken' }
     ];
 
     const homeServices = [
@@ -30,6 +26,13 @@ export class InMemoryDataService implements InMemoryDbService {
       short_text: "Envíenos su consulta en cualquier momento!"
     };
 
-    return {services, homeServices, contact};
+    const categories = [
+      { id: 'pizza-tab', link_reference: 'pizza', name: 'Tratamientos Faciales', aria: 'pizza' },
+      { id: 'pills-bread-tab', link_reference: 'pills-bread', name: 'Terapias Alternativas', aria: 'pills-bread' },
+      { id: 'pills-burger-tab', link_reference: 'pills-burger', name: 'Tratamientos Corporales', aria: 'pills-burger' },
+      { id: 'pills-chicken-tab', link_reference: 'pills-chicken', name: 'Chicken', aria: 'pills-chicken' }
+    ]
+
+    return {services, homeServices, contact, categories};
   }
 }

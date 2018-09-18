@@ -3,4 +3,5 @@ export class Service {
     name: string;
     description: String;
     image: String;
+    category: String;
 }

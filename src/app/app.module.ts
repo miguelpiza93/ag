@@ -12,12 +12,15 @@ import { AppRoutingModule } from './/app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { CatalogServicesComponent } from './catalog-services/catalog-services.component';
 
+import { ServicePipe } from './catalog-services/service-pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
     AboutComponent,
-    CatalogServicesComponent
+    CatalogServicesComponent,
+    ServicePipe
   ],
   imports: [
     BrowserModule,
