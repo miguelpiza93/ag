@@ -35,7 +35,7 @@
       <div *ngFor="let category of categories; let i = index" class="tab-pane fade" [id]="category.reference" role="tabpanel"
         aria-labelledby="category.id" [class.active]="i == 0" [class.show]="i == 0">
         <div *ngFor="let service of services | categoryFilter: category.reference" class="single-menu-list row justify-content-between align-items-center">
-          <div class="col-lg-9">
+          <div class="col-lg-8">
             <a href="#">
               <h4>{{service.name}}</h4>
             </a>
@@ -43,18 +43,10 @@
               {{service.description}}
             </p>
           </div>
-          <div class="col-lg-3 flex-row d-flex price-size">
-            <div class="s-price col">
-              <h4>6”</h4>
-              <span>$15</span>
-            </div>
-            <div class="s-price col">
-              <h4>10”</h4>
-              <span>$20</span>
-            </div>
-            <div class="s-price col">
-              <h4>14”</h4>
-              <span>$25</span>
+          <div class="col-lg-4 flex-row d-flex price-size">
+            <div *ngFor="let type of service.types" class="s-price col">
+              <h4>{{type.name}}</h4>
+              <span>{{type.price}}</span>
             </div>
           </div>
         </div>
